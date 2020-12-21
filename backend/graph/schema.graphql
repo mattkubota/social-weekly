@@ -1,0 +1,17 @@
+type User {
+  id: ID!
+  spotifyID: String!
+  name: String!
+}
+
+input NewUser {
+  spotifyID: ID!
+}
+
+type Query {
+  user: User!
+}
+
+type Mutation {
+  createUser(input: NewUser!): User!
+}
